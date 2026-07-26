@@ -1,0 +1,16 @@
+# ESP32-WROOM modules normally carry 4 MB flash and no PSRAM.
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions_singleapp_4mb.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions_singleapp_4mb.csv"
+
+# The full application links Wi-Fi and BLE together. Keep optional Wi-Fi hot
+# paths in flash to preserve the ESP32-WROOM's limited IRAM, and optimize the
+# remaining code for size.
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+# CONFIG_ESP_WIFI_IRAM_OPT is not set
+# CONFIG_ESP_WIFI_RX_IRAM_OPT is not set
+
+# Keep the full dual-core ESP32 available to the firmware services.
+# CONFIG_FREERTOS_UNICORE is not set
