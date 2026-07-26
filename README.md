@@ -9,12 +9,13 @@ Download .bin from releases and flash to 0x0 with [esp.huhn.me](https://esptool.
 ## Hardware
 https://github.com/Teapot174/ESP-HACK
 
-### Build (Windows)
-SH1106
+## Build (Windows)
+
+### SH1106
 ```bat
 python winbuild.py build --board wroom-sh
 ```
-SSD1306
+### SSD1306
 ```bat
 python winbuild.py build --board wroom-ssd
 ```
